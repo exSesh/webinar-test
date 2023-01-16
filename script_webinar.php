@@ -8,7 +8,7 @@
 <h2>Вывод скрипта по заданию</h2>
 
 <?php
-$conn = new mysqli("127.0.0.1", "root", "8hXI5MgIbqifZ", "webinar_db");
+$conn = new mysqli("127.0.0.1", "root", "8hXI5MgIbqifZ", "webinar_bd");
 if($conn->connect_error){
     die("Ошибка: " . $conn->connect_error);
 }
