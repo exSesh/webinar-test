@@ -1,10 +1,16 @@
 version: '3.9'
 services:
   php:
-    image: php:7.2-intl
+    image: php:7.2-apache
+    volumes:
+    - './src:/var/www/html'
 
   apache:
     image: httpd:latest
+    ports:
+    - 80:80
+    volumes:
+    - './src:/var/www/html'
 
   mysql:
     image: mysql:5.7.40
