@@ -5,7 +5,8 @@ services:
     ports:
     - 80:80
     volumes:
-    - 51.250.9.44
+    - http://51.250.9.44/
+    - './src:/var/www/html'
 
   apache:
     image: httpd:latest
