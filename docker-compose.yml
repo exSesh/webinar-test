@@ -3,8 +3,6 @@ services:
   php:
     build:
       context: ./docker/php/
-    ports:
-    - 80:80
     volumes:
     - './src:/var/www/html'
     links:
@@ -12,6 +10,8 @@ services:
 
   apache:
     image: httpd:latest
+    ports:
+    - 80:80
     volumes:
       - './src:/var/www/html'
 
