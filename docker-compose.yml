@@ -2,7 +2,7 @@ version: '3'
 services:
   php:
     build:
-      context: .docker/php/
+      context: ./docker/php/
     volumes:
     - './src:/var/www/html'
 
