@@ -4,6 +4,6 @@
   gather_facts: true
   tasks:
   - name: "open project"
-      shell: cd webinar-test
+    shell: cd webinar-test
   - name: "start docker compose"
-      shell: docker compose up -d
+    shell: docker compose up -d
