@@ -1,4 +1,4 @@
-name: docker_lamp project
-hosts: docker-dev-web
-tasks:
+- name: docker_lamp_project
+  hosts: docker-dev-web
+  tasks:
   - ping:
