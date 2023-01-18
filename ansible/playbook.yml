@@ -1,16 +1,13 @@
 ---
   - hosts: docker-dev-web
     gather_facts: true
-    vars:
-      trigger_task: true
     tasks:
-    - name: "git clone"
-      shell: git clone https://github.com/exSesh/webinar-test.git
-      when: trigger_task
-
-    - name: "git pull"
-      shell: cd webinar-test
-      shell: git pull
+    - name: Clone a github repository
+      git:
+        repo: https://github.com/exSesh/webinar-test.git
+        dest: /home/sesh/
+        clone: yes
+        update: yes
 
     - name: "start docker compose"
       shell: docker compose -f webinar-test/docker-compose.yml up -d
