@@ -5,7 +5,6 @@
     - name: Clone a github repository
       git:
         repo: https://github.com/exSesh/webinar-test.git
-        dest: /home/sesh/
         clone: yes
         update: yes
 
