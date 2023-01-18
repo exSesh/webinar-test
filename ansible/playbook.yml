@@ -4,6 +4,11 @@
     tasks:
     - name: "git clone"
       shell: git clone https://github.com/exSesh/webinar-test.git
-      
+      when: trigger_task
+
+    - name: "git pull"
+      shell: cd webinar-test
+      shell: git pull
+
     - name: "start docker compose"
       shell: docker compose -f webinar-test/docker-compose.yml up -d
