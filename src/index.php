@@ -9,7 +9,7 @@
 
 <?php
 $peremen = " ";
-$conn = new mysqli("localhost", "root", "8hXI5MgIbqifZ", "webinar_bd", 3306);
+$conn = new mysqli("172.17.0.1", "root", "8hXI5MgIbqifZ", "webinar_bd", 3306);
 if($conn->connect_error){
     die("Ошибка: " . $conn->connect_error);
 }
