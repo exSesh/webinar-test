@@ -2,8 +2,5 @@
   - hosts: docker-dev-web
     gather_facts: true
     tasks:
-    - name: "open project"
-      shell: cd /home/sesh/webinar-test/
-
     - name: "start docker compose"
       shell: docker compose -f webinar-test/docker-compose.yml up -d
