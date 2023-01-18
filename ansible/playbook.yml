@@ -1,4 +1,9 @@
-- name: docker_lamp_project
+---
+- name: docker_dev_project
   hosts: docker-dev-web
+  gather_facts: true
   tasks:
-  - ping:
+  - name: "open project"
+      shell: cd webinar-test
+  - name: "start docker compose"
+      shell: docker compose up -d
