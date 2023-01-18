@@ -1,15 +1,5 @@
 version: '3'
 services:
-  apache:
-    image: httpd:2.4
-    ports:
-      - 80:80
-    volumes:
-      - ./src:/var/www/html
-      - ./httpd/httpd.conf:/usr/local/apache2/conf/httpd.conf
-    depends_on:
-      - php
-
   php:
     build:
       context: ./docker/php/
@@ -28,3 +18,13 @@ services:
     volumes:
       - ./docker/volume/mysql:/var/lib/mysql
       - ./db/init.sql:/webinar_bd.sql
+
+  apache:
+    image: httpd:2.4
+    ports:
+      - 80:80
+    volumes:
+      - ./src:/var/www/html
+      - ./httpd/httpd.conf:/usr/local/apache2/conf/httpd.conf
+    depends_on:
+      - php
