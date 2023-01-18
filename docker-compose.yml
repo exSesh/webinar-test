@@ -21,7 +21,6 @@ services:
       - MYSQL_USER=root
       - MYSQL_ROOT_PASSWORD=8hXI5MgIbqifZ
       - MYSQL_DATABASE=webinar_bd
-      - MYSQL_HOST=127.0.0.1
     ports:
       - 3306:3306
     volumes:
