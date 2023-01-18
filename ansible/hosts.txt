@@ -1,0 +1,3 @@
+[staging_servers]
+lamp-dev-web ansible_host=51.250.9.44 ansible_user=sesh ansible_ssh_private_key_file=/home/sesh/.ssh/webdevlamp
+docker-dev-web ansible_host=51.250.81.142 ansible_user=sesh ansible_ssh_private_key_file=/home/sesh/.ssh/webdevlamp

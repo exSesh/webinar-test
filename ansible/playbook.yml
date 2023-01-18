@@ -1,0 +1,4 @@
+name docker_lamp project
+hosts: 'all'
+tasks:
+  - ping:
