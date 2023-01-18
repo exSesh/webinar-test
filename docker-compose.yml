@@ -4,16 +4,16 @@ services:
     build:
       context: ./docker/php/
     volumes:
-    - './src:/var/www/html'
+      - './src:/var/www/html'
     links:
-    - mysql
+      - mysql
 
   apache:
     image: httpd:latest
     ports:
     - 80:80
     volumes:
-      - ./src:/usr/local/apache2/htdocs
+      - './src:/var/www/html'
     links:
     - php
 
