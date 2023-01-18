@@ -4,17 +4,18 @@ services:
     build:
       context: ./docker/php/
     volumes:
-      - ./src:/usr/local/apache2/htdocs
+      - './src:/var/www/html'
     links:
       - mysql
 
   apache:
-    image: httpd:latest
+    image: httpd:2.4
     ports:
       - 80:80
     volumes:
-      - ./src:/usr/local/apache2/htdocs
-    links:
+      - ./src:/var/www/html
+      - ./httpd/httpd.conf:/usr/local/apache2/conf/httpd.conf
+    depends_on:
       - php
 
   mysql:
@@ -25,5 +26,5 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - './docker/volume/mysql:/var/lib/mysql'
-      - './db/init.sql:/webinar_bd.sql'
+      - ./docker/volume/mysql:/var/lib/mysql
+      - ./db/init.sql:/webinar_bd.sql
