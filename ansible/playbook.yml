@@ -1,9 +1,9 @@
 ---
-  hosts: docker-dev-web
-  gather_facts: true
-  tasks:
-  - name: "open project"
+  - hosts: docker-dev-web
+    gather_facts: true
+    tasks:
+    - name: "open project"
     shell: cd webinar-test
-    
-  - name: "start docker compose"
+
+    - name: "start docker compose"
     shell: docker compose up -d
