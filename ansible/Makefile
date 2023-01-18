@@ -1,1 +1,2 @@
-$ ansible-playbook  playbook.yml -i hosts.txt
+#bash
+ansible-playbook  playbook.yml -i hosts.txt
