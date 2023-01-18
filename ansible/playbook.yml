@@ -12,4 +12,4 @@
       shell: docker compose -f webinar-test/docker-compose.yml up -d
 
     - name:
-      shell: cat ./webinar_bd.sql | docker exec -i webinar-test-mysql-1 mysql --password=8hXI5MgIbqifZ webinar_bd
+      shell: cat ~/webinar_bd.sql | docker exec -i webinar-test-mysql-1 mysql --password=8hXI5MgIbqifZ webinar_bd
