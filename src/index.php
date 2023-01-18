@@ -17,7 +17,7 @@ if($result = mysqli_query($conn, $sql)){
 echo $row["name"] . $peremen . $row["family"] . $peremen . "from" . $peremen . gethostbyaddr('172.17.0.1:$i');
 	}
 }
-$conn6->close();
+$conn->close();
 }
 ?>
 </body>
