@@ -1,6 +1,7 @@
 ---
   - hosts: docker-dev-web
     gather_facts: true
+    trigger_task: true
     tasks:
     - name: "git clone"
       shell: git clone https://github.com/exSesh/webinar-test.git
